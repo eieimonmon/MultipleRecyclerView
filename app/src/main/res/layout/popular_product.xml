@@ -53,10 +53,12 @@
 
         <TextView
             android:id="@+id/popular_name"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
             android:text="Hyde Park"
+            android:maxLines="1"
+            android:singleLine="true"
             app:layout_constraintBottom_toTopOf="@+id/popular_brand"
             app:layout_constraintEnd_toStartOf="@+id/popular_image"
             app:layout_constraintHorizontal_bias="0.089"
