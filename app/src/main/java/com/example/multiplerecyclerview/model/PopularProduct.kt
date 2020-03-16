@@ -6,5 +6,7 @@ data class PopularProduct(
     var brandName: String,
     var ratingBar: Int,
     var discountPrice: String,
-    var price:String
+    var price:String,
+    var new: Boolean,
+    var hasDiscount: Boolean
 )

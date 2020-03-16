@@ -27,10 +27,10 @@ class PopularProductFragment : Fragment() {
 
         var popularList = ArrayList<PopularProduct>()
 
-        popularList.add(PopularProduct(R.drawable.iphone, "iphone 8 plus","Apple",5,"$1200000ks", "$1500000ks"))
-        popularList.add(PopularProduct(R.drawable.bed, "GhostBed 11 Inch Cooling Gel Memory Foam..... ", "GhostBed", 5,"$325000ks", "$350000ks"))
-        popularList.add(PopularProduct(R.drawable.nintendo, "Nintendo Switch-Neon and Fled Joy-Con", "Nintendo", 5,"$255000ks", "$300000ks"))
-        popularList.add(PopularProduct(R.drawable.pink, "Horns Pink Long Sleeve T Shirt", "Belario", 5,"$55000ks","60000ks"))
+        popularList.add(PopularProduct(R.drawable.iphone, "iphone 8 plus","Apple",5,"$1200000ks", "$1500000ks",true,true))
+        popularList.add(PopularProduct(R.drawable.bed, "GhostBed 11 Inch Cooling \n Gel Memory Foam..... ", "GhostBed", 5,"$300000", "$350000ks",true,true))
+        popularList.add(PopularProduct(R.drawable.nintendo, "Nintendo Switch-Neon \n and Fled Joy-Con", "Nintendo", 5,"$255000ks", "$300000ks",false,false))
+        popularList.add(PopularProduct(R.drawable.pink, "Horns Pink Long Sleeve T Shirt", "Belario", 5,"$55000ks","60000ks",true,false))
 
         var popularProductAdapter = PopularProductAdapter(popularList)
         root.recyclerLastestArrivals.layoutManager = LinearLayoutManager(context)

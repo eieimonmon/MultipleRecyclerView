@@ -36,6 +36,15 @@ class PopularProductAdapter (var popularProductList: ArrayList<PopularProduct>):
             itemView.rating_bar.numStars = popularProduct.ratingBar
             itemView.discount_price.text = popularProduct.discountPrice
             itemView.price.text = popularProduct.price
+
+            if (popularProduct.new == false){
+                itemView.btnNew.visibility = View.INVISIBLE
+            }
+
+            if (popularProduct.hasDiscount == false){
+                itemView.btnOff.visibility = View.INVISIBLE
+                itemView.price.visibility = View.INVISIBLE
+            }
         }
     }
 

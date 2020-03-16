@@ -28,6 +28,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
+            android:id="@+id/btnOff"
             android:layout_width="70dp"
             android:layout_height="20dp"
             android:layout_marginStart="72dp"
@@ -57,8 +58,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
             android:text="Hyde Park"
-            android:maxLines="1"
-            android:singleLine="true"
+            android:maxLines="2"
+
             app:layout_constraintBottom_toTopOf="@+id/popular_brand"
             app:layout_constraintEnd_toStartOf="@+id/popular_image"
             app:layout_constraintHorizontal_bias="0.089"
