@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardMaxElevation="8dp"
+    app:cardCornerRadius="8dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginLeft="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/lastest_arrival_image"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lastest_arrival_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="Hyde Park"
+            app:layout_constraintLeft_toLeftOf="@id/lastest_arrival_image"
+            app:layout_constraintTop_toBottomOf="@id/lastest_arrival_image" />
+
+        <TextView
+            android:id="@+id/lastest_arrival_model_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="N41015"
+            app:layout_constraintLeft_toLeftOf="@id/lastest_arrival_image"
+            app:layout_constraintTop_toBottomOf="@id/lastest_arrival_name" />
+
+        <TextView
+            android:id="@+id/lastest_arrival_brand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Louis Vuition"
+            app:layout_constraintLeft_toLeftOf="@id/lastest_arrival_name"
+            app:layout_constraintTop_toBottomOf="@id/lastest_arrival_model_no" />
+
+        <View
+            android:id="@+id/horizontal_divider"
+            android:layout_width="180dp"
+            android:layout_height="1dp"
+            android:background="@color/colorBlack"
+            app:layout_constraintLeft_toLeftOf="@id/lastest_arrival_name"
+            app:layout_constraintTop_toBottomOf="@id/lastest_arrival_brand" />
+
+        <RatingBar
+            android:id="@+id/rating_bar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:numStars="5"
+            android:progressBackgroundTint="@color/colorPrimaryDark"
+            android:progressTint="@color/colorGold"
+            android:rating="4"
+            app:layout_constraintLeft_toLeftOf="@id/lastest_arrival_name"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_divider" />
+
+        <View
+            android:id="@+id/vertical_divider"
+            android:layout_width="1dp"
+            android:layout_height="40dp"
+            android:background="@color/colorBlack"
+            app:layout_constraintLeft_toRightOf="@id/rating_bar"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_divider" />
+
+        <TextView
+            android:id="@+id/discount_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="240000 KS"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toRightOf="@id/rating_bar"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_divider" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="@drawable/line"
+            android:text="290000 KS"
+            android:textSize="12sp"
+            app:layout_constraintRight_toRightOf="@id/discount_price"
+            app:layout_constraintTop_toBottomOf="@id/discount_price" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardMaxElevation="8dp"
+    app:cardCornerRadius="8dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <Button
+            android:id="@+id/btnNew"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shap"
+            android:text="New"
+            android:textColor="#fff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/popular_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginLeft="72dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shapoff"
+            android:text="30% off"
+            android:textColor="#fff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/btnNew"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/popular_image"
+            android:layout_width="130dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/popular_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="Hyde Park"
+            app:layout_constraintBottom_toTopOf="@+id/popular_brand"
+            app:layout_constraintEnd_toStartOf="@+id/popular_image"
+            app:layout_constraintHorizontal_bias="0.089"
+            app:layout_constraintLeft_toLeftOf="@id/popular_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/popular_brand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Louis Vuition"
+            app:layout_constraintBottom_toTopOf="@+id/rating_bar"
+            app:layout_constraintLeft_toLeftOf="@id/popular_name"
+            app:layout_constraintTop_toBottomOf="@+id/popular_name"
+            app:layout_constraintVertical_bias="0.619" />
+
+        <RatingBar
+            android:id="@+id/rating_bar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:numStars="5"
+            android:progressBackgroundTint="@color/colorPrimaryDark"
+            android:progressTint="@color/colorGold"
+            android:rating="4"
+            app:layout_constraintBottom_toBottomOf="@+id/popular_image"
+            app:layout_constraintLeft_toLeftOf="@id/popular_name"
+            app:layout_constraintTop_toBottomOf="@id/popular_name" />
+
+        <View
+            android:id="@+id/horizontal_divider"
+            android:layout_width="200dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorBlack"
+            app:layout_constraintLeft_toLeftOf="@id/popular_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rating_bar" />
+
+        <TextView
+            android:id="@+id/discount_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="240000 KS"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/popular_image"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@id/rating_bar"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/popular_brand"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_divider" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="95dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="12dp"
+            android:foreground="@drawable/line"
+            android:text="290000 KS"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.109"
+            app:layout_constraintRight_toRightOf="@id/discount_price"
+            app:layout_constraintStart_toEndOf="@+id/discount_price"
+            app:layout_constraintTop_toBottomOf="@+id/horizontal_divider" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
